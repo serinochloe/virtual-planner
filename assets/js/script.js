@@ -16,12 +16,16 @@ $(function () {
 
     // save listener 
 
-$(".saveBtn-9").click(function(event) {
+
+$(".saveBtn").click(function(event) {
     event.preventDefault();
+
+    var hour = $(".time-block").attr("id");
+    console.log(hour);
+
     var userInput = $(".description-9").val();
-    console.log(userInput);
-    // event.preventDefault();
-    // $('.description-9').html();
+
+  
     localStorage.setItem("9AM", JSON.stringify(userInput));
       });
     //
