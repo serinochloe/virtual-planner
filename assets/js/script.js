@@ -15,18 +15,22 @@ $(function () {
 // var userInput = $('.description-9').val();
 
     // save listener 
-
+    var textArea= $('.description');
 
 $(".saveBtn").click(function(event) {
     event.preventDefault();
-
-    var hour = $(".time-block").attr("id");
-    console.log(hour);
-
-    var userInput = $(".description-9").val();
+  console.log("clicked");
+    var clickLocation = $(".saveBtn").parents().attr("id");
+    console.log(clickLocation);
+  // var clickLocation = ".saveBtn".parents();
+  // var hour = $(".time-block").attr("id");
+  // console.log(hour);
+    // get the text area sibling content for the description variable 
+  var description = $(textArea).val();
+  console.log(description);
 
   
-    localStorage.setItem("9AM", JSON.stringify(userInput));
+    // localStorage.setItem(".time-block", JSON.stringify(userInput));
       });
     //
     // TODO: Add code to apply the past, present, or future class to each time
